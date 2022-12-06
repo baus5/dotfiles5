@@ -3,6 +3,10 @@
 My development environment settings, configurations and customizations for - macOS, Linux, Windows and all OS
 
 
+## Context
+
+* HomeBrew
+
 
 # HomeBrew
 
