@@ -139,6 +139,14 @@ uninstall_oh_my_zsh
 
 
 
+
+
+# OhMyPosh
+
+info
+
+
+
 # Git
 
 
