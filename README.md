@@ -137,3 +137,112 @@ It will remove itself and revert your previous `bash` or `zsh`configuration.
 uninstall_oh_my_zsh
 ```
 
+
+
+# Git
+
+
+
+## install
+
+### mac
+
+### win
+
+### linux
+
+
+
+
+
+## Use SSH on WSL
+
+How to Use SSH with GitHub (Instead of HTTPS) on Windows WSL
+
+https://logfetch.com/git-ssh-keys/
+
+
+
+### Obtain SSH key
+
+To see if there is an existing `SSH` key that we can use:
+
+```
+ls -al ~/.ssh
+```
+
+If an `SSH` key already exists:
+
+```
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+```
+
+* If these files don’t exist, we’ll generate a new key.
+* we can directly add the key to `ssh-agent`
+* add to our GitHub account
+
+
+
+### Generate a new key
+
+replacing `some_email@gmail.com` with your GitHub account email:
+
+```
+ssh-keygen -t ed25519 -C "some_email@gmail.com"
+```
+
+* press `Enter` to use the default file location.
+* type in a secure passphrase to add an extra layer of security to this process.
+
+
+
+### Add key to ssh-agent
+
+*info*
+
+```
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+* start the `ssh-agent` in the background
+* add our private key to the `ssh-agent`
+
+
+
+### Add key to GitHub account
+
+we need to copy the public key to our clipboard.
+
+```
+cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub | clip  # on Windows
+```
+
+* Settings > SSH and GPG keys.
+* New SSH key
+* Title (Personal Pcname  WSL)
+* Key > paste
+
+
+
+### Test SSH connection
+
+Let’s verify our setup.
+
+```
+ssh -T git@github.com
+```
+
+* type yes
+
+
+
+
+
+
+
+# -End-
+
