@@ -147,6 +147,34 @@ info
 
 
 
+## Themes
+
+Themes location:
+
+```
+ C:\Users\Baus\AppData\Local\Programs\oh-my-posh\themes
+```
+
+change:
+
+```
+C:\Users\Baus\Documents\PowerShell\Microsoft.PowerShell_profile.ps1.
+```
+
+init system env:
+
+```
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\hul10.omp.json" | Invoke-Expression
+```
+
+init default:
+
+```
+'C:\Users\Baus\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json' | Invoke-Expression
+```
+
+
+
 # Git
 
 
@@ -248,7 +276,11 @@ ssh -T git@github.com
 
 
 
+## Ed25519
 
+
+
+## RSA
 
 
 
